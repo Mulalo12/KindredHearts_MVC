@@ -1,0 +1,175 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+    <header class="header">
+
+
+        <div class="header__title">
+            <h1>
+
+
+                <span class="highlight">Our</span>
+                Organization<br />
+                <span class="highlight">KindredHearts</span>
+            </h1>
+            <h4>A simpler way to build a family.</h4>
+
+        <img src="~/lib/images/kindred1.png" class="header__img" />
+        </div>
+    </header>
+
+    <section class="section" id="section--1">
+        <div class="section__title">
+            <h2 class="section__description">about Us</h2>
+            <h3 class="section__header">
+                Everything you need to know about us.
+            </h3>
+        <img src="~/lib/images/kindred2.png"  class="about_img" />
+
+
+            <h5 class="features__header">What do we do?</h5>
+            <p>
+                Our platform connects potential parents with orphanages by streamlining the process of viewing available children, scheduling meetings, receiving assistance via chat-bot, and donating.
+                Our system includes e-learning to help parents make an informed decision between adopting and fostering.
+
+            </p>
+        </div>
+
+        <div class="features__How">
+
+
+            <h5 class="features__header">How do we do it?</h5>
+        <img src="~/lib/images/kindred3.png"  class="How_img" />
+            <p>
+                We help you understand what it means to adopt or foster a potential orphan.
+                We provide ways to prepare you mentally, physically, and emotionally.
+                Background checks are completed to ensure the safety of both parties.
+
+
+            </p>
+        </div>
+
+
+
+        <div class="features__feature">
+        <img src="~/lib/images/kinded4.png"  class="Our_img" />
+            <h5 class="features__header">Our Objectives</h5>
+
+            <p>
+                To ensure the highest level of safety and ease in the profile and adoption process.
+                Accept the culture of considering adoption if one is unable to have a child.
+                Demonstrate to others that it can be done easily and successfully.
+
+            </p>
+        </div>
+
+    </section>
+
+    <section class="section" id="section--2">
+        <div class="section__title">
+            <h2 class="section__description">Adoption</h2>
+            <h3 class="section__header">
+                Choose the way you want to start your family
+            </h3>
+        </div>
+
+        <div class="adopt">
+            <div class="adopt__tab-container">
+                <button class="btn adopt__tab adopt__tab--1 adopt__tab--active"
+                        data-tab="1">
+                    <span>01</span>Adopt
+                </button>
+                <button class="btn adopt__tab adopt__tab--2" data-tab="2">
+                    <span>02</span>Foster
+                </button>
+                <button class="btn adopr__tab adopt__tab--3" data-tab="3">
+                    <span>03</span>Enquire
+                </button>
+            </div>
+            <div class="adopt__content adopt__content--1 adopt__content--active">
+                <div class="adopt__icon adopt__icon--1">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-upload"></use>
+                    </svg>
+                </div>
+                <h5 class="adopt__header">
+                    It only takes a courage to start and be successful.
+                </h5>
+                <p>
+                    Remember to provide legitimate information that has been certified by officials.
+                    Any irregularities will be reported and handed over to the authorities.
+
+
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section" id="section--3">
+        <div class="section__title section__title--event">
+            <h2 class="section__description">Upcoming Events</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth">Prev</button>
+                    <h2 id="monthYear"></h2>
+                    <button id="nextMonth">Next</button>
+                </div>
+                <table id="calendar">
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="event-form">
+                    <h3>View Event</h3>
+                    <input type="date" id="eventDate">
+                    <input type="text" id="eventTitle" placeholder="Event Title">
+                    <button id="addEvent">View</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <div>
+        <p class="ofind">Find the right Orphanage for you</p>
+        </div>
+<div class="Maps"
+
+<!-- Embed Google Maps iframe with a predefined search query -->
+<iframe
+    id="map"
+    src="https://www.google.com/maps?q=orphanages+near+me&output=embed"
+    width="100%"
+    height="100%"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+</div>
+
+        </div>
+
+    <section class="section section--sign-up">
+        <div class="section__title">
+            <h3 class="section__header">
+                The only best organization that matches you with the desired family in South Africa.
+            </h3>
+        </div>
+        <button class="btn btn--show-modal">Explore Today!</button>
+    </section>
+
+
+

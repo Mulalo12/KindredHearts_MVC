@@ -1,0 +1,11 @@
+﻿@model Testing.Models.Child 
+
+<h1>@Model.FirstName @Model.LastName's Profile</h1>
+<div>
+    <img src="@Model.PhotoUrl" alt="@Model.FirstName's Photo" />
+    <p><strong>Age:</strong> @Model.Age</p>
+    <p><strong>Date of Birth:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+    <p><strong>Gender:</strong> @Model.Gender</p>
+    <p><strong>Orphanage Name:</strong> @Model.OrphanageName</p>
+    <!-- Add any other relevant details here -->
+</div>

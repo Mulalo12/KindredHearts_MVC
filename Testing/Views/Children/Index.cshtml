@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Testing.Models.Child>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Profiles</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container profile-container">
+        <h1 class="text-center mb-5">Children Available for Adoption</h1>
+        <div class="row">
+            @if (!Model.Any())
+            {
+                <div class="col-12">
+                    <p class="text-warning text-center">No profiles available.</p>
+                </div>
+            }
+            else
+            {
+                @foreach (var child in Model)
+                {
+                    <div class="col-lg-4 col-md-6">
+                        <div class="profile-card">
+                            @if (!string.IsNullOrEmpty(child.PhotoUrl))
+                            {
+                                <img src="@child.PhotoUrl" alt="@child.FirstName @child.LastName" class="child-photo" />
+                            }
+                            <h5 class="child-name">@child.FirstName @child.LastName</h5>
+                            <p class="text-muted"><strong>Age:</strong> @child.Age years</p>
+                            <button class="btn btn-display" onclick="toggleInfo(@child.Id)">Display Info</button>
+
+                            <div id="info-@child.Id" style="display:none;" class="mt-3">
+                                <p><strong>Gender:</strong> @child.Gender</p>
+                                <p><strong>Date of Birth:</strong> @child.DateOfBirth.ToString("MMMM dd, yyyy")</p>
+                                <p><strong>Orphanage:</strong> @child.OrphanageName</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <script>
+        function toggleInfo(id) {
+            console.log(`Toggling info for child ID: ${id}`);
+            const infoDiv = document.getElementById(`info-${id}`);
+            if (infoDiv) {
+                infoDiv.style.display = (infoDiv.style.display === 'none' || infoDiv.style.display === '') ? 'block' : 'none';
+            }
+        }
+    </script>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
