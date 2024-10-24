@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Testing.Controllers;
 using Testing.Models;
-using YourProjectName.Models;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
@@ -10,8 +9,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         : base(options)
     {
     }
-    public DbSet<Volunteer> Volunteers { get; set; }
+       public DbSet<Join> JoinRecords { get; set; }
     public DbSet<Child> Children { get; set; }
+    public DbSet<Appointment> Appointments { get; set; }
+}
+    
     
     // Add this line
 }
