@@ -51,5 +51,15 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Volunteer}/{action=Create}/{id?}");
 
+app.MapControllerRoute(
+    name: "Join",
+    pattern: "{controller=Join}/{action=Index}/{id?}");  // Join controller
+
+app.MapControllerRoute(
+    name: "appointment",
+    pattern: "{controller=Appointment}/{action=Create}/{id?}");  // Appointment controller
+
+
+
 app.Run();
 
