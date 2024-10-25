@@ -1,0 +1,41 @@
+@model Testing.Models.Appointment
+<section class="hero">
+    <h1>Schedule Your Appointment</h1>
+    <p>We're here to help you every step of the way!</p>
+</section>
+
+<section class="appointment-form">
+    <h2>Book an Appointment</h2>
+    <form asp-action="Create" method="post">
+        <label for="FullName">Full Name:</label>
+        <input type="text" id="FullName" name="FullName" required>
+
+        <label for="SurName">Sur Name:</label>
+        <input type="text" id="SurName" name="SurName" required>
+
+        <label for="Email">Email Address:</label>
+        <input type="email" id="Email" name="Email" required>
+
+        <label for="Phone">Phone Number:</label>
+        <input type="tel" id="Phone" name="Phone" required>
+
+        <label for="ServiceType">Service Type:</label>
+        <select id="ServiceType" name="ServiceType" required>
+            <option value="">Select a Service</option>
+            <option value="consultation">Consultation</option>
+            <option value="follow-up">Follow-up</option>
+            <option value="check-up">Check-Up</option>
+        </select>
+
+        <label for="PreferredDate">Preferred Date:</label>
+        <input type="date" id="PreferredDate" name="PreferredDate" required>
+
+        <label for="PreferredTime">Preferred Time:</label>
+        <input type="time" id="PreferredTime" name="PreferredTime" required>
+
+        <label for="AdditionalNotes">Additional Notes:</label>
+        <textarea id="AdditionalNotes" name="AdditionalNotes" rows="4"></textarea>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+</section>
